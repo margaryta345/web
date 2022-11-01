@@ -1,0 +1,33 @@
+body{
+  background-image: url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-pink-solid-color-background.jpg);
+
+}
+.p1{
+    color:yellow;
+}
+#p2{
+    font-style: italic;
+}
+h1{
+    color:purple ;
+    font-size: 10cm;
+}
+.p3{
+    color: blue;
+}
+.first{
+  text-align: center;
+  letter-spacing: 6mm;
+
+}
+.second{
+ border-left: 6px dashed red;
+ padding: 10px;
+}
+.third{
+font-style: italic;
+color:green;
+font-family:garamond;
+font-size:small;
+
+}
