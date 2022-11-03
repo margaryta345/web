@@ -1,0 +1,71 @@
+body{
+  background:yellow;
+
+}
+
+h1{
+    text-align: center;
+    font-size:80;
+}
+
+h2{
+    text-align: center;
+    font-size:80;
+}
+
+
+img{
+   float: right;
+   width:260px;
+   height:202px;
+}
+
+.text{
+  font-size:25;
+}
+
+gallery{
+  float: right;
+}
+.scale{
+    transition: 1s;
+    transform:scale(0.3);
+  }
+  .scale:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 0px 30px blue;
+  }
+figure {
+padding: 100px; /* Поля вокруг */
+display: block; /* Блочный элемент */
+width: 150px; /* Ширина */
+float: left; /* Блоки выстраиваются по горизонтали */
+margin: 0 0px 10px 0; /* Отступы */
+text-align: center; /* Выравнивание по центру */
+}
+figcaption {
+color: black; /* Цвет текста */
+}
+
+table{
+   width: 100%; /* Ширина таблицы */
+   border-collapse: collapse; /* Убираем двойные рамки */
+  }
+  th, td {
+   border: 1px solid #333; /* Параметры рамки */
+   padding: 4px; /* Поля в ячейках */
+  }
+  tr:hover {
+   background: pink; /* Цвет фона */
+  }
+
+  .caption{
+    width: 300px; /* Ширина таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+   }
+   td {
+    text-align: center; /* Выравниваем текст по центру ячейки */
+  }
+.even{
+  background:blue;
+}
