@@ -1,0 +1,128 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+  text-align: center;
+  color:red;
+}
+
+.horisontal-ul li {
+   display: inline-block;
+}
+.d1{
+    width: 200px;
+    height: 200px;
+    float: left;
+
+
+    shape-outside: circle(60%);
+    clip-path: polygon(0 0, 91% 0, 100% 56%, 90% 99%, 0 100%, 0% 50%);
+}
+.sweater{
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  left: 50px;
+background: yellow;
+  clip-path: polygon(67% 38%, 98% 77%, 88% 83%, 69% 59%, 70% 100%, 33% 100%, 32% 63%, 16% 89%, 3% 85%, 33% 39%);
+}
+
+.baschmak{
+    float: left;
+    width: 100;
+    height: 0;
+    left: 100px;
+border-radius:50%;
+    top: 150px;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 50px solid #003bfc;
+    position: relative;
+    }
+    .baschmak:after {
+    content: "";
+    width: 50;
+    height: 0;
+    position: absolute;
+    top: -76px;
+    left: 48px;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 110px solid #003bfc;
+    }
+
+    .handschuhe {
+      width: 100px;
+      height: 35px;
+      float: left;
+      background: green;
+      position: absolute;
+      left: 720px;
+      top: 350px;
+      }
+.handschuhe:before,
+.handschuhe:after {
+    position: absolute;
+    content: "";
+    left: 40px;
+    top: -90;
+    width: 60px;
+    height: 100px;
+    background: green;
+    border-radius: 50px 50px 0 0;
+    transform-origin: 0 100%;
+}
+
+.handschuhe:after {
+    left: 0;
+    top: -40;
+    width: 39px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    transform-origin :100% 100%;
+}
+
+.mütze{
+    position: relative;
+    width: 100px;
+    height: 90px;
+    float: left;
+    left: 400px;
+    top: 100px;
+    transform: rotate(-20deg);
+}
+
+.mütze:before,
+.mütze:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-10deg);
+    transform-origin: 0 100%;
+}
+
+.mütze:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+.hose {
+width: 120px;
+height: 120px;
+position: absolute;
+float: left;
+left: 1100px;
+top: 280px;
+
+background: pink;
+clip-path:polygon(30% 0%, 70% 0%, 89% 80%, 69% 87%, 48% 40%, 32% 89%, 10% 89%, 18% 40%);
+}
