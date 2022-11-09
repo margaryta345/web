@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Lab5</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="lab9.css">
+        <meta name="Author" content="Shcherbiak Margaryta">
+    </head>
+    <body >
+      <p>Лабораторна 9</p>
+
+      <form id="forma" action="/lab9/" method="POST">
+
+  <label>
+    Ваша адерса:
+    <input type="<text>" adress="adress" id="adress" placeholder="Пушкінська 79/1" required autofocus>
+  </label>
+
+  <p><label>
+    Пошта:
+    <input type="email" name="email" id="email" placeholder="elon@musk.com" required>
+  </label></p>
+
+  <p><label>
+    Номер телефону:
+    <input type="number" name="phone_number"  id="phone_number" placeholder="38068576924" required>
+  </label></p>
+
+  <p><label>
+    Професія:
+    <select name="specialization" required>
+      <option value="engineer" selected>Інженер</option>
+      <option value="scientist">Науковець</option>
+      <option value="psychologist">Психолог</option>
+      <option value="other">Інша</option>
+    </select>
+  </label></p>
+
+  <p><label>
+    Статус навчання:
+<input type="radio" name="group1" value="Школяр">Школяр
+<input type="radio" name="group1" value="Студент" checked> Студент
+<input type="radio" name="group1" value="Не навчаюсь"> Не навчаюсь
+</label></p>
+
+<p><label>
+  Професія яку хочу освоїти:
+<br><input type="checkbox">Data science<br>
+<input type="checkbox">Web-design<br>
+<input type="checkbox">Programming<br>
+<input type="text" name="text" placeholder="Math programing"><br>
+  </label></p>
+  <h2 id='result'></h2>
+
+  <button type="submit" id="button">Відправити</button>
+</form>
+<script type="text/javascript">
+  var form=document.getElementById("forma");
+  var email=document.getElementById("email");
+  var adress=document.getElementById("adress");
+  var phone_number=document.getElementById("phone_number");
+  var my_variant=document.getElementById("my_variant");
+  var button=document.getElementById("button");
+
+
+button.addEventListener("click", check);
+  function check()
+  {
+      if(adress.value=="")
+        {
+          alert("Заповніть адресу!");
+          return false;
+        }
+
+        else if (email.value=="")
+        {
+          alert("Заповніть емейл!");
+          return false;
+        }
+
+        else if (phone_number.value=="")
+        {
+          alert("Заповніть номер телефону!");
+          return false;
+        }
+
+        else if (my_variant.value=="")
+        {
+          alert("Заповніть заповніть ваш варіант!");
+          return false;
+        }
+
+  }
+
+
+      button.addEventListener("click", validateForm);
+      function validateForm()
+      {
+          function validateEmail(email) {
+          var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          if(!re.test(email)){
+                  alert("Неправильно введена электронная почта");
+                  email.focus();
+                  email.select();
+                  return false;
+              }
+                  var zapret = /^[А-ЯЁ][а-яё][0-9]*$/;
+                  if(!zapret.test(adress)){
+                      alert("Введите заново адрес");
+                      adress.focus();
+                      adress.select();
+                      return false;
+                  }
+
+
+    var regexfornumber = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+    var i=phone_number.innerText = text.value.length;
+         if(i!=13)
+         {
+                 alert("Мало цифр!Их должно бить 12 Начало с 380");
+          }
+        else
+        {
+      if(!regexfornumber.test(phone_number)){
+          alert("Неправильно введен номер телефона");
+          phone_number.focus();
+          phone_number.select();
+          return false;
+                                            }
+        }
+
+
+</script>
+    </body>
+</html>
