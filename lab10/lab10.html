@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="lab10.css">
+        <title>Лабораторна робота 10</title>
+    </head>
+    <body>
+        <form name="MyForm" onsubmit="return check()">
+            <label>Введіть пароль</label>
+            <input type="password" name="password" id="pass"><br>
+            <hr>
+            <input type="radio" name="radiobox" id="Бокс1" >1<br>
+            <input type="radio" name="radiobox" id="Бокс2">2<br>
+            <input type="radio" name="radiobox" id="Бокс3">3<br>
+            <hr>
+            <input type="checkbox" name="checkbox1" id="Вибір1">1<br>
+            <input type="checkbox" name="checkbox2" id="Вибір2">2<br>
+            <input type="checkbox" name="checkbox3" id="Вибір3">3<br>
+            <input type="submit" value="Submit">
+        </form>
+          <script>
+            function check(){
+          var password = document.forms["MyForm"]["password"].value;
+          var my_password = "Rita";
+          if(password == ""){
+              alert("Введіть пароль");
+              return false;
+          }
+          else if(password != my_password){
+              alert("Пароль неправильний");
+              return false;
+          }
+
+          var r1 = document.getElementById("Бокс1");
+          var r2 = document.getElementById("Бокс2");
+          var r3 = document.getElementById("Бокс3");
+          
+          if(!r1.checked && !r2.checked && !r3.checked){
+              alert("Перемикачі не натиснуті");
+              return false;}
+         else if(r1.checked){
+              console.log("r1 checked");
+          }else if(r2.checked){
+              console.log("r2 is checked");
+          }else if(r3.checked){
+              console.log("r3 is checked");
+          }
+
+          var c1 = document.getElementById("Вибір1");
+          var c2 = document.getElementById("Вибір2");
+          var c3 = document.getElementById("Вибір3");
+          if(!c1.checked && !c2.checked && !c3.checked){
+              alert("Флажкі не натиснуті");
+              return false;
+          }else if(c1.checked && c2.checked){
+              console.log("c1 , c2 are checked");
+          }else if(c1.checked && c3.checked){
+              console.log("c1 , c3 are checked");
+          }else if(c2.checked && c3.checked){
+              console.log("c2 , c3 are checked");
+          }else if(c1.checked && c2.checked && c3.checked){
+              console.log("c1, c2 , c3 are checked");
+          }else if(c1.checked){
+              console.log("c1 is checked");
+          }else if(c2.checked){
+              console.log("c2 is checked");
+          }else if(c3.checked){
+              console.log("c3 is checked");
+          }
+      }
+</script>
+</body>
+</html>
