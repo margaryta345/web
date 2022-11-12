@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторна робота 11</title>
+    </head>
+    <body>
+        <canvas id="MyCanvas" width="500" height="500"></canvas>
+        <script>
+var canvas = document.getElementById("MyCanvas");
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = "yellow";
+ctx.lineWidth = 3;
+ctx.fillRect(15, 15, 266, 266);
+
+ctx.strokeRect(17.5, 17.5, 260, 260);
+ctx.lineWidth = 4;
+ctx.strokeStyle = 'blue';
+ctx.strokeRect(60, 60, 50, 50);
+ctx.strokeRect(180, 60, 50, 50);
+ctx.strokeRect(60, 170, 50, 50);
+ctx.strokeRect(180,170, 50, 50);
+
+ctx.lineWidth = 2;
+ctx.strokeStyle = 'black';
+for (i=50; i<275; i+=25){
+  ctx.strokeRect(i, 35, 1, 1);
+}
+
+for (i=175; i<275; i+=25){
+  ctx.strokeRect(i, 135, 1, 1);
+}
+
+for (i=50; i<100; i+=25){
+  ctx.strokeRect(i, 135, 1, 1);
+}
+
+for (i=60; i<275; i+=25){
+  ctx.strokeRect(150, i, 1, 1);
+}
+
+for (i=60; i<275; i+=25){
+    ctx.strokeRect(265, i, 1, 1);
+}
+
+for (i=175; i<275; i+=25){
+    ctx.strokeRect(i, 260, 1, 1);
+}
+for (i=50; i<200; i+=25){
+    ctx.strokeRect(i, 260, 1, 1);
+}
+
+for (i=60; i<275; i+=25){
+    ctx.strokeRect(25, i, 1, 1);
+  }
+ctx.strokeRect(267, 35, 1, 1);
+
+
+var gr1 = ctx.createLinearGradient(5, 0, 60, 0);
+gr1.addColorStop(0, "red");
+gr1.addColorStop(1, "blue");
+ctx.beginPath();
+ctx.arc(40, 37.5, 13, 0.1 * Math.PI, 1.9 * Math.PI);
+ctx.lineTo(40, 37.5);
+ctx.fillStyle = gr1;
+ctx.fill();
+ctx.closePath();
+ctx.stroke();
+
+
+var gr2 = ctx.createLinearGradient(95, 135, 130, 135);
+gr2.addColorStop(0, "red");
+gr2.addColorStop(1, "pink");
+ctx.beginPath();
+ctx.lineWidth = 1.5;
+ctx.arc(112.5,135, 14, Math.PI/180 * 180, Math.PI/180 * 0, false);
+ctx.lineTo(127.5, 150);
+ctx.lineTo(123.75, 142);
+ctx.lineTo(120, 150);
+ctx.lineTo(116.25, 142);
+ctx.lineTo(112.5, 150);
+ctx.lineTo(108.75, 142);
+ctx.lineTo(105, 150);
+ctx.lineTo(101.25, 142);
+ctx.lineTo(97.5, 150);
+ctx.lineTo(97.5, 135);
+ctx.fillStyle = gr2;
+ctx.fill();
+ctx.closePath();
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = "white";
+ctx.lineWidth = 1;
+ctx.arc(105, 135, 3, Math.PI/180 * 0, Math.PI/180 * 360, false);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = "white";
+ctx.lineWidth = 1;
+ctx.arc(120, 135, 3, Math.PI/180 * 0, Math.PI/180 * 360, false);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+ctx.fillStyle = "blue";
+ctx.font = "20px serif";
+ctx.fillText("Game_man", 105,310);
+        </script>
+
+    </body>
+</html>
